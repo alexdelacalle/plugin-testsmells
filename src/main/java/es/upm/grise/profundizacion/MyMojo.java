@@ -84,7 +84,7 @@ public class MyMojo
 
             process.waitFor();
 
-            File resultFile = new File(jarPath.getParentFile(), "output.csv");
+            File resultFile = new File("output.csv");
 
             if (!resultFile.exists()) {
                 throw new MojoExecutionException(
