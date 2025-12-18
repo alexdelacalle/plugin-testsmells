@@ -55,8 +55,9 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.10.1</version>
         <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
+          <source>11</source>
+          <target>11</target>
+          <release>11</release>
         </configuration>
       </plugin>
 
@@ -80,20 +81,5 @@
     </plugins>
   </build>
 
-  <profiles>
-    <!-- Profile específico para JitPack -->
-    <profile>
-      <id>jitpack</id>
-      <activation>
-        <property>
-          <name>env.JITPACK</name>
-        </property>
-      </activation>
-      <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-      </properties>
-    </profile>
-  </profiles>
 
 </project>
